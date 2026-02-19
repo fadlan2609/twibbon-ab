@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Generate Twibbon - Twibbon App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Twibbon<span>App</span></h1>
+            <a href="index.html" class="btn btn-secondary">← Kembali</a>
+        </header>
+
+        <main>
+            <section class="generate-section">
+                <h2>Buat Twibbonmu</h2>
+                
+                <div id="templateInfo" class="template-info">
+                    <!-- Template info will be loaded here -->
+                </div>
+
+                <div class="generate-container">
+                    <!-- Photo Upload -->
+                    <div class="form-group">
+                        <label for="photoUpload">Upload Foto Kamu</label>
+                        <input type="file" id="photoUpload" accept="image/*" capture="environment">
+                        <p class="help-text">Foto akan diproses di browser, aman dan privasi terjaga</p>
+                    </div>
+
+                    <!-- Canvas Preview -->
+                    <div class="canvas-container">
+                        <canvas id="previewCanvas" width="500" height="500"></canvas>
+                    </div>
+
+                    <!-- Control Panel -->
+                    <div class="control-panel">
+                        <h3>Sesuaikan Posisi Foto</h3>
+                        
+                        <div class="slider-group">
+                            <label for="scaleSlider">Ukuran: <span id="scaleValue">100%</span></label>
+                            <input type="range" id="scaleSlider" min="50" max="200" value="100">
+                        </div>
+                        
+                        <div class="slider-group">
+                            <label for="xSlider">Geser Horizontal: <span id="xValue">0</span></label>
+                            <input type="range" id="xSlider" min="-100" max="100" value="0">
+                        </div>
+                        
+                        <div class="slider-group">
+                            <label for="ySlider">Geser Vertikal: <span id="yValue">0</span></label>
+                            <input type="range" id="ySlider" min="-100" max="100" value="0">
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button id="downloadBtn" class="btn btn-primary">Download Twibbon</button>
+                        <button id="resetBtn" class="btn btn-secondary">Reset Posisi</button>
+                    </div>
+
+                    <!-- Share Section -->
+                    <div class="share-section">
+                        <h3>Bagikan ke Teman</h3>
+                        <div class="share-link">
+                            <input type="text" id="shareLink" readonly>
+                            <button id="copyLinkBtn" class="btn btn-small">Copy Link</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Twibbon App - #selaluamanah</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

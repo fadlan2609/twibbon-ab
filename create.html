@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Twibbon - Twibbon App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Twibbon<span>App</span></h1>
+            <nav class="admin-nav">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="create.html" class="nav-link active">Buat Twibbon</a>
+                <a href="index.html" class="nav-link logout">Logout</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="create-section">
+                <h2>Buat Template Twibbon Baru</h2>
+                
+                <div class="create-container">
+                    <form id="createForm">
+                        <div class="form-group">
+                            <label for="templateName">Nama Template</label>
+                            <input type="text" id="templateName" placeholder="Contoh: Twibbon 17 Agustus" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="templateFile">Upload Template (PNG Transparan)</label>
+                            <div class="file-upload-area" id="fileUploadArea">
+                                <input type="file" id="templateFile" accept="image/png" required>
+                                <div class="upload-placeholder">
+                                    <span class="upload-icon">📁</span>
+                                    <p>Klik atau drag & drop file PNG disini</p>
+                                    <p class="small">Background harus transparan</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="preview-container">
+                            <h3>Preview Template:</h3>
+                            <img id="templatePreview" src="#" alt="Preview" style="display: none;">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="shareLink">Link Template</label>
+                            <div class="link-preview">
+                                <input type="text" id="shareLink" readonly value="https://twibbon.app/generate.html?id=new">
+                                <button type="button" id="copyLinkBtn" class="btn btn-small">Copy</button>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Simpan Template</button>
+                            <a href="dashboard.html" class="btn btn-secondary">Batal</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

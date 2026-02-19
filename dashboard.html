@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Twibbon App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Twibbon<span>App</span></h1>
+            <nav class="admin-nav">
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="create.html" class="nav-link">Buat Twibbon</a>
+                <a href="index.html" class="nav-link logout">Logout</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="dashboard-section">
+                <h2>Dashboard Admin</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-info">
+                            <h3>Total Template</h3>
+                            <p id="totalTemplates">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <h3>Total Pengguna</h3>
+                            <p>156</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⬇️</div>
+                        <div class="stat-info">
+                            <h3>Total Download</h3>
+                            <p>1,234</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="template-management">
+                    <h3>Daftar Template</h3>
+                    <div class="template-list" id="templateList">
+                        <!-- Templates will be loaded here -->
+                        <p class="empty-message">Belum ada template. <a href="create.html">Buat template baru</a></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
